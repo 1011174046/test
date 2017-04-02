@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+          canvas{
+            border:10px groove red;
+          }
+        </style>
+    </head>
+    <body>
+    <canvas width="600" height="300" id="cas"></canvas>
+    </body>
+    <script>
+        var cas = document.getElementById("cas");
+        var ctx = cas.getContext("2d");
+
+        function Line(ctx,x0,y0,x1,y1){
+              this.ctx =ctx;
+              this.x0 = x0;
+              this.y0 = y0;
+              this.x1 = x1;
+              this.y1 = y1;
+         
+
+          }
+          Line.prototype = {
+            constructor:line,
+
+            stroke:function(){
+              this.ctx.moveTo(this.x0,this.y0);
+              this.ctx.lineTo(this.x1, this.y1);
+              this.ctx.stroke();
+            }
+          }
+          var line = new Line( ctx, 100, 100, 400, 100,100);
+          
+          line.stroke();
+    </script>
+</html>

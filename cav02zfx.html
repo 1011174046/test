@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+          canvas{
+            border:1px solid red;
+          }
+        </style>
+    </head>
+    <body>
+      <canvas width="600" height="400" id="cas"></canvas>
+    </body>
+    <script>
+    /*
+    var cas = document.getElementById('cas');
+
+    var ctx = cas.getContext("2d");
+    ctx.moveTo(100, 200);  //起笔点
+    ctx.lineTo(200,300);   //绘制轨迹
+
+    ctx.stroke(); //将轨迹进行描边
+    */
+   
+    var cas = document.getElementById('cas');
+  
+    var ctx = cas.getContext('2d');
+ 	ctx.moveTo(100,100);
+ 	ctx.lineTo(300,100);
+ 	ctx.lineTo(300,300);
+ 	ctx.lineTo(100,300);
+ 	ctx.lineTo(100,100);
+  	
+ 	ctx.moveTo(400,100);
+ 	ctx.lineTo(500,300);
+ 	ctx.lineTo(300,300);
+ 	ctx.lineTo(400,100);
+
+ 	ctx.moveTo(150,100);
+ 	ctx.lineTo(300,100);
+ 	ctx.lineTo(250,300);
+ 	ctx.lineTo(100,300);
+ 	ctx.lineTo(150,100);
+
+
+   
+ 	// ctx.stroke();
+ 	ctx.fill();
+
+    </script>
+</html>

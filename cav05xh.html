@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	canvas{
+		border:10px double red;
+	}
+	</style>
+</head>
+<body>
+	<canvas width="800" height="600" id="cas"></canvas>
+</body>
+<script>
+	var cas = document.getElementById('cas');
+	var ctx = cas.getContext('2d');
+
+	var step = 10,start = 100;
+	while(true){
+		if( start >500) break;
+	ctx.moveTo(start,100);
+	ctx.lineTo(start+=step,100);
+	start = start + step;
+	}
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.moveTo(100,400);
+	ctx.lineTo(500,400);
+	ctx.setLineDash([10,30,3]);
+	ctx.stroke();
+
+
+</script>
+</html>
